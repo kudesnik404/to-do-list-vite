@@ -1,0 +1,17 @@
+{
+  "arrowParens": "avoid",
+  "bracketSameLine": false,
+  "bracketSpacing": true,
+  "embeddedLanguageFormatting": "auto",
+  "htmlWhitespaceSensitivity": "ignore",
+  "insertPragma": false,
+  "jsxSingleQuote": false,
+  "proseWrap": "never",
+  "quoteProps": "preserve",
+  "requirePragma": false,
+  "semi": true,
+  "singleAttributePerLine": true,
+  "singleQuote": false,
+  "trailingComma": "es5",
+  "vueIndentScriptAndStyle": false
+}

@@ -1,0 +1,23 @@
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: $button-padding;
+  border-radius: $button-border-radius;
+  border: none;
+  font-weight: $button-font-weight;
+  font-size: $button-font-size;
+  line-height: $button-line-height;
+  text-transform: $button-text-transform;
+  cursor: pointer;
+  @include transition(background-color);
+  &_primary {
+    background-color: $button-background-color-primary;
+    color: $button-color-primary;
+    @media (any-pointer: fine) {
+      &:hover {
+        background-color: $button-background-color-primary-hover;
+      }
+    }
+  }
+}

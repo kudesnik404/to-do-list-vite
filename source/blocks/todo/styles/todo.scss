@@ -1,0 +1,99 @@
+.todo {
+  padding: 100px 0 235px;
+  @media (min-width: 450px) {
+    padding: 162px 0 272px;
+  }
+  &__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 0 16px 0 15px;
+    @media (min-width: 450px) {
+      max-width: 420px;
+      margin: 0 auto;
+    }
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      border-radius: 20px;
+    }
+    &::before {
+      top: -35px;
+      left: 2px;
+      width: 72%;
+      height: 85px;
+      background-image: linear-gradient(180deg, #4f5565 0%, #000000 54%);
+      transform: rotate(-4.48deg);
+      @media (min-width: 450px) {
+        width: 342px;
+      }
+    }
+    &::after {
+      top: -20px;
+      width: 83%;
+      height: 68px;
+      background-image: linear-gradient(180deg, #31394d 0%, #091739 100%);
+      transform: rotate(-2.32deg);
+      @media (min-width: 450px) {
+        width: 395px;
+      }
+    }
+  }
+  &__card {
+    display: flex;
+    flex-direction: column;
+    height: 540px;
+    padding: 30px;
+    background-color: #252e42;
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.25);
+    border-radius: 20px 0 40px;
+    z-index: 3;
+    &_overflown {
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 1px;
+        left: 25px;
+        right: 34px;
+        height: 75px;
+        background-image: linear-gradient(180deg, rgba(37, 46, 66, 0) 0%, #252e42 67%);
+        pointer-events: none;
+      }
+    }
+  }
+  &__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.2;
+  }
+  &__button {
+    margin-left: 20px;
+  }
+  &__list {
+    margin-top: 29px;
+    overflow-y: auto;
+  }
+  &__card_overflown &__list {
+    margin: 20px -14px 0 0;
+    padding: 9px 10px calc(75px * 0.33) 0;
+    @include scrollbar($scrollbar-thumb-background-color);
+  }
+  &__checkbox:not(:first-of-type) {
+    margin-top: 18px;
+  }
+  &__copyright {
+    display: block;
+    margin-top: 30px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.25;
+    color: $text-color-tertiary;
+  }
+}

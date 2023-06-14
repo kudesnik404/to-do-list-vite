@@ -1,0 +1,46 @@
+/* Colors */
+$color-primary: #ff8469;
+$color-secondary: #4f5565;
+
+/* Text */
+$text-color-primary: #ffffff;
+$text-color-secondary: $color-secondary;
+$text-color-tertiary: #414b62;
+
+/* Buttons */
+$button-padding: 5px 10px;
+$button-border-radius: 7px;
+$button-font-weight: 500;
+$button-font-size: 14px;
+$button-line-height: 1.2;
+$button-text-transform: uppercase;
+$button-background-color-primary: $color-primary;
+$button-background-color-primary-hover: #d95133;
+$button-color-primary: $text-color-primary;
+
+/* Checkboxes */
+$checkbox-custom-size: 20px;
+$checkbox-custom-border-radius: 6px;
+$checkbox-custom-background-color: $color-secondary;
+$checkbox-custom-background-color-hover: rgba($color-primary, 0.2);
+$checkbox-custom-background-color-checked: $color-primary;
+$checkbox-custom-checkmark-size: 12px;
+$checkbox-content-margin: 15px;
+$checkbox-content-font-weight: 500;
+$checkbox-content-font-size: 16px;
+$checkbox-content-line-height: 1.25;
+$checkbox-content-color-hover: $color-primary;
+$checkbox-content-color-checked: $text-color-secondary;
+$checkbox-content-color-checked-hover: $text-color-primary;
+$checkbox-description-margin: 3px;
+$checkbox-description-font-weight: 400;
+$checkbox-description-font-size: 12px;
+$checkbox-description-line-height: 1.25;
+$checkbox-description-color: $text-color-secondary;
+
+/* Scrollbar */
+$scrollbar-thumb-background-color: $color-primary;
+
+/* Transitions */
+$transition-duration: 0.2s;
+$transition-timing-function: ease-in-out;

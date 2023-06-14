@@ -1,0 +1,82 @@
+.checkbox {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: $checkbox-custom-size;
+  padding-left: calc($checkbox-custom-size + $checkbox-content-margin);
+  cursor: pointer;
+  &__input {
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  &__custom {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: $checkbox-custom-size;
+    height: $checkbox-custom-size;
+    border-radius: $checkbox-custom-border-radius;
+    background-color: $checkbox-custom-background-color;
+    @include transition(background-color);
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-image: url("./../icons/checkmark.svg");
+      background-size: $checkbox-custom-checkmark-size;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0;
+      @include transition(opacity);
+    }
+  }
+  @media (any-pointer: fine) {
+    &:hover &__custom {
+      background-color: $checkbox-custom-background-color-hover;
+    }
+  }
+  &__input:checked ~ &__custom {
+    background-color: $checkbox-custom-background-color-checked;
+    &::after {
+      opacity: 1;
+    }
+  }
+  &__content {
+    font-weight: $checkbox-content-font-weight;
+    font-size: $checkbox-content-font-size;
+    line-height: $checkbox-content-line-height;
+    @include transition(color);
+  }
+  @media (any-pointer: fine) {
+    &:hover &__content {
+      color: $checkbox-content-color-hover;
+    }
+  }
+  &__input:checked ~ &__content {
+    color: $checkbox-content-color-checked;
+    text-decoration: line-through;
+  }
+  @media (any-pointer: fine) {
+    &:hover &__input:checked ~ &__content {
+      color: $checkbox-content-color-checked-hover;
+    }
+  }
+  &__description {
+    display: inline-block;
+    margin-top: $checkbox-description-margin;
+    font-weight: $checkbox-description-font-weight;
+    font-size: $checkbox-description-font-size;
+    line-height: $checkbox-description-line-height;
+    color: $checkbox-description-color;
+  }
+  &__input:checked ~ &__content &__description {
+    text-decoration: line-through;
+  }
+}

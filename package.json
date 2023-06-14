@@ -1,0 +1,25 @@
+{
+  "name": "Oktada",
+  "private": true,
+  "scripts": {
+    "serve": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint:styles": "stylelint --config ./config/.stylelintrc.json --fix ./source/**/*.{css,scss}",
+    "lint:scripts": "eslint --config ./config/.eslintrc.json --fix ./source/**/*.js",
+    "lint:prettier": "prettier --config ./config/.prettierrc.json --write ./source/",
+    "lint": "concurrently npm:lint:*"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "concurrently": "^8.0.1",
+    "eslint": "^8.38.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "postcss-scss": "^4.0.6",
+    "prettier": "2.8.7",
+    "sass": "^1.60.0",
+    "stylelint": "^15.4.0",
+    "stylelint-scss": "^4.6.0",
+    "vite": "^4.2.1"
+  }
+}

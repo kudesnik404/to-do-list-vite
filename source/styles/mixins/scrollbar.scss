@@ -1,0 +1,16 @@
+@mixin scrollbar($thumb-background-color) {
+  & {
+    scrollbar-width: thin;
+    scrollbar-color: $thumb-background-color transparent;
+  }
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $thumb-background-color;
+    border-radius: 10px;
+  }
+}
